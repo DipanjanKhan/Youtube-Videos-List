@@ -29,15 +29,14 @@ def findLeatestVideos(channel_id):
     num = 1
     print(respance['items'][0]['snippet']['channelTitle'])
     for video in respance['items']:
-        # print(video['snippet']['channelTitle'])
         name = video['snippet']['title']
         thambnailUrl = video['snippet']['thumbnails']['high']['url']
         description = video['snippet']['description']
         publishedAt = video['snippet']['publishedAt']
         videoId = video['id']['videoId']
         videoUrl = f'https://youtube.com/watch?v={videoId}'
-        # print(f"Video {num}\nName: {name}\nThumbnail Url: {thambnailUrl}\nDescreption: {description}\nPublish At: {publishedAt}\nVideo Link: {videoUrl}\n")
-        # num += 1
+        print(f"Video {num}\nName: {name}\nThumbnail Url: {thambnailUrl}\nDescreption: {description}\nPublish At: {publishedAt}\nVideo Link: {videoUrl}\n")
+        num += 1
 
 if __name__ == '__main__':
     print(f"Channel Name: {channelName}\n")
